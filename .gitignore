@@ -1,6 +1,8 @@
 *.pyc
 *.bak
 __pycache__/
+._*
+.sisyphus/
 build/
 dist/
 hitran_api.egg-info/
@@ -9,6 +11,18 @@ hitran_api.egg-info/
 .venv*/
 venv/
 env/
+.vscode/
+hitran_db/
+.omc
+.claude
+.ruff_cache
+
+
+artifacts/
+band_intensity_comparisons/
+ch4_nu3_progressions/
+co_nu1_progressions/
+hitran_exomolCH4_db/
 
 species_plots_2500_3500/
 species_plots_2500_3500_multiTP/
@@ -41,3 +55,4 @@ co_hot_bands/
 exomol_ch4_mm_band_exports/
 exomol_i1_smoke_band_texts/
 exomol_test_band_texts/
+ch4_nu3_treanor/
