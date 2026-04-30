@@ -32,7 +32,7 @@ linked in the frontmatter.
 ### HITRAN (from `.header` / `.data`)
 
 | Field | Physical meaning | Consumed by |
-|---|---|---|
+| --- | --- | --- |
 | `nu` | Line-center wavenumber (cm⁻¹) | HAPI Voigt kernel; spectral-window filter |
 | `sw` | Reference line intensity at 296 K (cm/molecule) | HAPI S(T) rescaling |
 | `elower` | Lower-state energy (cm⁻¹) | Boltzmann factor in S(T) |
@@ -45,7 +45,7 @@ Full column list with byte positions: `docs/HITRAN_DATABASE_NOTES.md`.
 ### ExoMol (from `.def` metadata file)
 
 | Field | Physical meaning | Consumed by |
-|---|---|---|
+| --- | --- | --- |
 | `mass_da` (Isotopologue mass) | Molecular mass in Daltons | Doppler width calculation |
 | `nstates` (No. of states) | Number of rows expected in `.states` | Array pre-allocation in `load_state_arrays` |
 | `gamma0` (Lorentz half-width) | Default pressure-broadening width (cm⁻¹/bar) | `lorentz_hwhm_cm` fallback |
@@ -58,7 +58,7 @@ Full ExoMol file structure: `docs/EXOMOL_DATABASE_NOTES.md`.
 ## §3 Code map
 
 | Symbol | File | What it does |
-|---|---|---|
+| --- | --- | --- |
 | `load_table(table_name)` | `research/hitran.py:57` | Reads `.header` JSON + locates `.data`; returns paths dict for HAPI ingestion |
 | `load_header_json(header_path)` | `research/hitran.py:625` | Parses the HAPI-format `.header` JSON into a plain dict |
 | `load_header_metadata(header_path, ...)` | `research/hitran.py:1063` | Extracts field positions and widths for fixed-width `.data` parsing |
@@ -70,7 +70,7 @@ Full ExoMol file structure: `docs/EXOMOL_DATABASE_NOTES.md`.
 
 ## §4 Structural difference at a glance
 
-```
+```text
 HITRAN row  →  nu, sw, elower, gamma_air, ...    (spectroscopy-ready)
 ExoMol row  →  upper_id, lower_id, A             (reconstruction required)
               + .states energies + .pf Q(T)  →  nu0 = E_upper − E_lower

@@ -12,6 +12,7 @@ See `docs/specs/2026-04-28-theory-code-crosswalk-design.md` for the
 design rationale.
 
 Read this page first. From here, navigate to the right doc via:
+
 - **§A** — what docs exist and how mature they are
 - **§B** — which crosswalk docs reference a given `research/` module
 - **§C** — what to read before doing a specific task
