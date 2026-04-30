@@ -1,3 +1,10 @@
+> **Archived 2026-04-29.** Superseded by `docs/pipeline_map.md` for the
+> runtime view, `docs/physics/05_band_jpair_structure.md` for J-pair logic,
+> and `docs/physics/03_numerical_caveats.md` for `wn_step` / merge details.
+> Kept here for historical reference to the original Q&A-style review notes.
+
+---
+
 # Four nu3 Absorbance Scripts
 
 This note is about these four scripts:
