@@ -122,6 +122,10 @@ Dependencies: numpy, matplotlib, plotly, scipy, pandas, setuptools.
 
 ## Key Constraints
 
+- **Physics guardrails**: Before changing any default, threshold, or
+  algorithm choice in `research/` or `scripts/`, read
+  `docs/physics_guardrails.md`. Every guardrail rule cites the
+  `docs/physics/` slice that justifies it.
 - **HAPI temperature range**: TIPS2025 partition functions only cover 1–2500 K. Runs above 2500 K will fail.
 - **T7 external drive**: The repo lives on `/Volumes/T7` (exFAT). macOS creates `._*` resource fork files on non-APFS volumes — these are gitignored and hidden in VS Code.
 - **Artifact output naming**: Output folder names must encode run conditions (e.g. `combined_exomol_i1_absorbance_T600K_P3Torr_x0p008_L100cm_step0p001`).
